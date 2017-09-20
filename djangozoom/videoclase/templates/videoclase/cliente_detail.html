@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<div>{% for x in lista  %}
+    <p> {{ x}}</p>
+</div>{% endfor %}
+
+
+
+
+ {% with slug as lista %}
+  {{block.super}}  mm  {{slug}}
+  {% endwith %}
+
+
+
+    <!--<ul>-->
+<!--{% for x in datos.meetings  %}-->
+    <!--<li>{{ x}}-->
+
+
+<!--</li>-->
+<!--{% endfor %}-->
+
+<!--</ul>-->
+
+<!--<div>-->
+  <!--<p> <a>Total Records : <p>{{ datos.total_records }}</p></a></p>-->
+
+<!--</div>-->
+<!--<div>{% for x in datos.meetings  %}-->
+    <!--<p> meetings : {{ x.meeting_number }}</p>   <p>{{ x.start_time }}</p>{% for rec in x.recording_files %}<li>{{ rec.recording_end }} Con el Id : {{ rec.meeting_id }} ternima :{{ rec.recording_end }}<li> descarga :{{ rec.download_url }} </li> {% endfor %} </p>-->
+
+<!--</div>{% endfor %}-->
+
+
+</body>
+</html>

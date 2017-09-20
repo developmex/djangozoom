@@ -1,0 +1,41 @@
+
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+
+<div>
+<ul>
+{% for meeting in object_list %}
+    <li>{{ meeting.meeting_number}}</li>
+    {% empty %}
+    <li>lista vacía </li>
+    {% endfor %}
+</ul></div>
+<div>
+
+    <ul>
+{% for meeting_list in object_list %}
+
+
+        {% for key, value in meeting_list.items %}
+        <li>{{ key }}: {{ value }}
+ {% endfor %}</li>
+
+
+
+
+
+    {% endfor %}
+
+
+</ul>
+
+</div>
+x
+
+{% endblock %}

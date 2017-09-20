@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lista de videods</title>
+
+
+</head>
+<body>
+
+
+
+index
+
+<div>
+
+
+
+        {% for rx in meeting_id %}
+   <ul>
+
+<li>{{ rx.meeting_id }}</li>
+ </ul>
+{% endfor %}
+
+
+
+</div>
+
+
+<div class="container">
+{% for meeting in meetings %}
+
+
+    <div class="row">
+        <div class="col">
+
+            <h1 >{{ meeting.meeting_number }}</h1>
+                </div>
+
+
+{% for rend in meeting.recording_files %}
+        <div class="col">
+
+
+             <p> con   la fecha de creación {{ rend.recording_end }}</p>
+
+             <p> Meeting id : {{ rend.meeting_id }}</p>
+             <p>Tipo de Archivo : {{ rend.file_type }} </p>
+
+             <p>Descarga: {{ rend.download_url}}</p>
+
+
+         </div>{% endfor %}
+   </div>
+
+
+
+{% endfor %}
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
